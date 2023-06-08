@@ -8,8 +8,13 @@
         <meta content="Algovie, votre Assistant de développement personnel prend le temps de vous connaître, optimise votre quotidien et vous motive pour atteindre tous vos objectifs. L’application trouve des solutions adaptées pour optimiser votre temps. Grâce à elle, gagnez en équilibre de vie et bien-être." name="description"/>
         <meta content="width=device-width, initial-scale=1" name="viewport"/>
         <meta content="Webflow" name="generator"/>
+
         <link href="https://uploads-ssl.webflow.com/63bd73a09b9b6e369089bd16/css/algovie-time-to-be-happy.webflow.fa93868cc.css" rel="stylesheet" type="text/css"/>
+        <!-- <link rel="stylesheet" href="style.css" /> -->
         <link rel="stylesheet" href="navbar.css" />
+        <link rel="stylesheet" href="menu-burger.css" />
+
+
         <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" type="text/javascript"></script><![endif]-->
         <script type="text/javascript">
             !function(o, c) {
@@ -31,16 +36,30 @@
                 </div>
                 <ul class="menu">
                     <li>
-                    <a href="#">Accueil</a>
+                    <a href="index.php">Accueil</a>
                     </li>
                     <li>
-                    <a href="#">Blog</a>
+                    <a href="blog.php">Blog</a>
                     </li>
                 </ul>
                 <div class="right-section">
                     <a href="#" class="btn-connect">Se connecter</a>
                 </div>
             </div>
+            <div class="side-nav ">
+                        <ul class="abs-center nav-options">
+                            <li class="rela-block"><a class="nav-link " href="index.php">Accueil</a></li>
+                            <li class="rela-block"><a class="nav-link " href="blog.php">Blog</a></li>
+                        </ul>
+                    </div>
+                <div class="rela-block top-section">
+                    <div class="nav-button my-2 top">
+                        <div class="abs-center nav-bars"></div>
+                    </div>
+                    <div class="search-button">
+                        <div class="abs-center magnefying-glass"></div>
+                    </div>
+                </div>
         </nav>
         <section class="header w-row">
             
