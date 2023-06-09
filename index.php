@@ -1,7 +1,30 @@
 <?php
 require_once('header.php')
 ?>
+        <!-- SECTION 1  -->
+        <section class="header w-row">
+            
 
+            <div class="column-2 w-col w-col-6 w-col-medium-6 ">
+
+                <img src="https://uploads-ssl.webflow.com/63bd73a09b9b6e369089bd16/63bd73f0d1bf3f1eafe1fb43_Logo_Algovie.png" loading="lazy" width="235" alt="" class="image"/>
+                <h1 class="heading">
+                    Avec du temps et de l’envie, <br/>atteignez tous vos objectifs !
+                </h1>
+                <a href="#email-form" class="button transitionbutton w-button">Lancez-vous !</a>
+            </div>
+            <div class="w-col w-col-6 w-col-medium-6"></div>
+        </section>
+        <div class="header-mobile wf-section">
+            <img src="https://uploads-ssl.webflow.com/63bd73a09b9b6e369089bd16/63bd73f0d1bf3f1eafe1fb43_Logo_Algovie.png" loading="lazy" width="167" alt="" class="image"/>
+            <h1 class="heading">
+                Avec du temps et de l’envie, <br/>atteignez tous vos objectifs !
+            </h1>
+            <a href="#email-form" class="button transitionbutton w-button">Lancez-vous !</a>
+        </div>
+        <div class="header-mobile-image wf-section">
+            <img src="https://uploads-ssl.webflow.com/63bd73a09b9b6e369089bd16/63bd73f098f7597b3f54214c_Header_Algovie_mobile.jpg" loading="lazy" sizes="(max-width: 479px) 100vw, (max-width: 991px) 90vw, 100vw" srcset="https://uploads-ssl.webflow.com/63bd73a09b9b6e369089bd16/63bd73f098f7597b3f54214c_Header_Algovie_mobile-p-500.jpg 500w, https://uploads-ssl.webflow.com/63bd73a09b9b6e369089bd16/63bd73f098f7597b3f54214c_Header_Algovie_mobile.jpg 711w" alt="" class="image-2"/>
+        </div>
 
         <div class="section wf-section">
             <div class="div-block">

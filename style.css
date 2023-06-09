@@ -46,14 +46,14 @@ p {
 
 a {
     color: #0a0a0a;
-    text-decoration: none;
+    text-decoration: none !important;
     transition: color 0.4s ease-in-out;
 }
 
 a:hover,
 a:active,
 a:focus {
-    color: #060E56;
+    color: #0c1671;
 }
 
 figure {

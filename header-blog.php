@@ -14,10 +14,7 @@
         <link rel="stylesheet" href="navbar.css" />
         <!-- <link rel="stylesheet" href="menu-burger.css" /> -->
             <!-- links pour icones fontawesome -->
-        <script
-        src="https://kit.fontawesome.com/896637ab26.js"
-        crossorigin="anonymous"
-        ></script>
+        <script src="https://kit.fontawesome.com/896637ab26.js" crossorigin="anonymous"></script>
 
 
 
