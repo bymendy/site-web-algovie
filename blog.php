@@ -6,10 +6,10 @@ require_once('header-blog.php')
   <section class="previews">
     <div>
       <figure class="absolute-bg preview__img" style="background-image: url('https://uploads-ssl.webflow.com/63bd73a09b9b6e369089bd16/63bd73f098f7597b3f54214c_Header_Algovie_mobile.jpg');"></figure>
-      <figure class="absolute-bg preview__img" style="background-image: url('https://unsplash.it/2000/1200?image=1003');"></figure>
-      <figure class="absolute-bg preview__img" style="background-image: url('https://unsplash.it/2000/1200?image=433');"></figure>
-      <figure class="absolute-bg preview__img" style="background-image: url('https://unsplash.it/2000/1200?image=40');"></figure>
-      <figure class="absolute-bg preview__img" style="background-image: url('https://unsplash.it/2000/1200?image=1074');"></figure>    
+      <figure class="absolute-bg preview__img" style="background-image: url('https://images.pexels.com/photos/10439804/pexels-photo-10439804.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');"></figure>
+      <figure class="absolute-bg preview__img" style="background-image: url('https://images.pexels.com/photos/3757650/pexels-photo-3757650.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');"></figure>
+      <figure class="absolute-bg preview__img" style="background-image: url('https://images.pexels.com/photos/5647266/pexels-photo-5647266.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');"></figure>
+      <figure class="absolute-bg preview__img" style="background-image: url('https://images.pexels.com/photos/6432056/pexels-photo-6432056.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');"></figure>    
       <div class="previews__container">
         <span>Bienvenue sur notre page</span>
         <h1>Blog</h1>
@@ -96,7 +96,7 @@ require_once('header-blog.php')
         <li class="card">
           <a class="card__link" href="#">
             <div class="card__img">
-              <figure class="absolute-bg" style="background-image: url('https://unsplash.it/500/300?image=718');"></figure>
+              <figure class="absolute-bg" style="background-image: url('https://images.pexels.com/photos/10439804/pexels-photo-10439804.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');"></figure>
             </div>
             <div class="card__container">
               <h2 class="card__header">Sport</h2>
@@ -108,7 +108,7 @@ require_once('header-blog.php')
         <li class="card">
           <a class="card__link" href="#">
             <div class="card__img">
-              <figure class="absolute-bg" style="background-image: url('https://unsplash.it/500/300?image=1060');"></figure>
+              <figure class="absolute-bg" style="background-image: url('https://images.pexels.com/photos/5647266/pexels-photo-5647266.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');"></figure>
             </div>  
             <div class="card__container">
               <h2 class="card__header">Sante</h2>
@@ -120,7 +120,7 @@ require_once('header-blog.php')
         <li class="card">
           <a class="card__link" href="#">
             <div class="card__img">
-              <figure class="absolute-bg" style="background-image: url('https://unsplash.it/500/300?image=16');"></figure>
+              <figure class="absolute-bg" style="background-image: url('https://images.pexels.com/photos/6432056/pexels-photo-6432056.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');"></figure>
             </div>
             <div class="card__container">
               <h2 class="card__header">Technologie</h2>
@@ -133,12 +133,10 @@ require_once('header-blog.php')
       <footer class="section-padding--sm footer">
         <a class="footer__archive" href="#">Derniers articles</a>
         <ul class="footer__social">
-          <li><a class="fa fa-lg fa-envelope-o" href="mailto:thomas.vaeth@gmail.com"></a></li>
-          <li><a class="fa fa-lg fa-github" href="https://github.com/thomasvaeth" target="_blank"></a></li>
-          <li><a class="fa fa-lg fa-codepen" href="https://codepen.io/thomasvaeth/" target="_blank"></a></li>
-          <li><a class="fa fa-lg fa-linkedin" href="https://www.linkedin.com/in/thomasvaeth" target="_blank"></a></li>
-          <li><a class="fa fa-lg fa-twitter" href="https://twitter.com/thomasvaeth" target="_blank"></a></li>
-          <li><a class="fa fa-lg fa-facebook" href="https://www.facebook.com/thomas.vaeth" target="_blank"></a></li>
+          <li><a class="fa fa-lg fa-envelope-o" href="mailto:"></a></li>
+          <li><a class="fa fa-lg fa-linkedin" href="#" target="_blank"></a></li>
+          <li><a class="fa fa-lg fa-twitter" href="#" target="_blank"></a></li>
+          <li><a class="fa fa-lg fa-facebook" href="#" target="_blank"></a></li>
           <li><a class="fa fa-lg fa-instagram" href="#" target="_blank"></a></li>  
         </ul>
       </footer>

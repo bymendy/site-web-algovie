@@ -1,11 +1,7 @@
 /**
- * Base Variables
+ * REGLAGE GLOBAL
  */
 :root {
-    /* --font-header: "Space Mono", monospace;
-    --font-body: "Inconsolata", monospace;
-    --font-post: "Lora", serif; */
-
     --color-alpha: #79a8dd;
     --color-alpha--light: #f5f3ef;
 
@@ -13,16 +9,10 @@
     --color-grey: #f8f9f9;
     --color-white: #fff;
 
-    --mq-xs: 20em;
-    --mq-sm: 30em;
-    --mq-md: 54em;
-    --mq-lg: 64em;
-    --mq-xl: 76.5em;
-    --mq-xxl: 114em;
 }
 
 /**
-   * Base Settings/Overwrite Normalize
+   * Paramètres de base
    */
 *,
 *:before,
@@ -31,46 +21,10 @@
 }
 
 body {
-    /* font-family: "Inconsolata", monospace;
-    font-feature-settings: "liga" 0; */
+    font-family: "Poppins", monospace;
+    font-feature-settings: "Poppins" 0;
     font-size: 80%;
     line-height: 1.6;
-}
-
-@media (min-width: 20em) {
-    body {
-        font-size: 102.5%;
-    }
-}
-
-@media (min-width: 30em) {
-    body {
-        font-size: 105%;
-    }
-}
-
-@media (min-width: 54em) {
-    body {
-        font-size: 107.5%;
-    }
-}
-
-@media (min-width: 64em) {
-    body {
-        font-size: 110%;
-    }
-}
-
-@media (min-width: 76.5em) {
-    body {
-        font-size: 115%;
-    }
-}
-
-@media (min-width: 114em) {
-    body {
-        font-size: 125%;
-    }
 }
 
 h1,
@@ -82,20 +36,9 @@ h2 {
 h1,
 h2 {
     margin: 0;
-    font-family: "Space Mono", monospace;
+    font-family: "Poppins", monospace;
 }
 
-@media (min-width: 54em) {
-    h1 {
-        font-size: 3em;
-    }
-}
-
-@media (min-width: 76.5em) {
-    h1 {
-        font-size: 3.5em;
-    }
-}
 
 p {
     margin: 0 0 0.75em;
@@ -138,36 +81,18 @@ ul {
     text-shadow: none;
 }
 
-/**
- * Underline Slide from left and back
- */
-/**
- * Button Slide
- * Need to still add hover state in parent element
- * box-shadow: inset 175px 0 0 0 $color-alpha;
- * color: $color-white;
- */
-/**
- * Flex Grid
- */
-/**
- * Box Shadow
- */
-/**
- * Letter Spacing
- */
 .footer__archive,
 .card__more,
 .preview__more,
 .previews__container span,
 .tabs {
-    font-family: "Space Mono", monospace;
+    font-family: "Poppins", monospace;
     letter-spacing: 0.05em;
     text-transform: uppercase;
 }
 
 /**
-   * Black Color Overlay
+   * Superposition de couleur noire
    */
 .card__img:after,
 .previews>*:first-child:after {
@@ -218,12 +143,6 @@ section {
 /**
    * Blog page
    */
-@media (max-width: 54em) {
-    .previews {
-        display: flex;
-        flex-direction: column;
-    }
-}
 
 .previews>*:first-child {
     position: relative;
@@ -231,48 +150,19 @@ section {
     background-color: #0a0a0a;
 }
 
-@media (min-width: 54em) {
-    .previews>*:first-child {
-        position: fixed;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 45%;
-    }
-}
-
 .previews>*:last-child {
     min-height: 100vh;
 }
 
-@media (min-width: 54em) {
-    .previews>*:last-child {
-        margin-left: 45%;
-    }
-}
 
 /**
-   * Tabs
-   * On the Blog page for posts and categories
+   * Onglets
+   *Sur la page du blog pour les articles et les catégories
    */
 .tabs {
     display: flex;
     justify-content: space-around;
     padding: 1em;
-}
-
-@media (min-width: 54em) {
-    .tabs {
-        padding-left: 8em;
-        padding-right: 8em;
-    }
-}
-
-@media (min-width: 114em) {
-    .tabs {
-        padding-left: 10em;
-        padding-right: 10em;
-    }
 }
 
 .tabs__item {
@@ -309,8 +199,8 @@ section {
 }
 
 /**
-   * Blog Post Preview
-   * On the Blog page
+   *Aperçu des articles de blog
+   * Sur la page du blogOn the Blog page
    */
 .previews__container {
     display: flex;
@@ -340,7 +230,7 @@ section {
 }
 
 .preview:hover .preview__more {
-    box-shadow: inset 175px 0 0 0 #245388;
+    box-shadow: inset 175px 0 0 0 #a5579e;
     color: #fff;
 }
 
@@ -353,19 +243,6 @@ section {
 .preview__link {
     display: block;
     padding: 2em 1em;
-}
-
-@media (min-width: 54em) {
-    .preview__link {
-        padding: 4em 8em;
-    }
-}
-
-@media (min-width: 114em) {
-    .preview__link {
-        padding-left: 10em;
-        padding-right: 10em;
-    }
 }
 
 .preview__date {
@@ -409,25 +286,9 @@ section {
     max-width: 100%;
 }
 
-@media (min-width: 54em) {
-    .cards>* {
-        flex-basis: 50%;
-        max-width: 50%;
-    }
-}
 
-@media (min-width: 114em) {
-    .cards>* {
-        flex-basis: 33.3333333333%;
-        max-width: 33.3333333333%;
-    }
-}
 
-@media (min-width: 54em) {
-    .cards {
-        padding: 4em 2em;
-    }
-}
+/* CARDS  */
 
 .card__link {
     box-shadow: 0 1px 2px rgba(10, 10, 10, 0.1), 0 1px 2px rgba(10, 10, 10, 0.2);
@@ -503,12 +364,6 @@ section {
     padding-right: 2em;
 }
 
-@media (min-width: 30em) {
-    .footer {
-        flex-direction: row;
-    }
-}
-
 .footer__archive {
     position: relative;
     color: #0a0a0a;
@@ -520,7 +375,7 @@ section {
     bottom: 0;
     left: 0;
     width: 0%;
-    border-bottom: 3px solid #9f8f68;
+    border-bottom: 3px solid #a5579e;
     transition: width 0.4s ease-in-out;
 }
 
@@ -533,11 +388,7 @@ section {
     margin-top: 1em;
 }
 
-@media (min-width: 30em) {
-    .footer__social {
-        margin-top: 0;
-    }
-}
+
 
 .footer__social>*:not(:last-child) {
     margin-right: 1em;
@@ -597,7 +448,9 @@ section {
     background-color: #fff;
 }
 
-/* MEDIA QUERIES */
+/************************* MEDIA QUERIES **********************/
+/* ************PAGE ACCEUIL******************/
+
 @media (min-width: 1000px) {
     #sidebar {
         width: 30%;
@@ -606,4 +459,141 @@ section {
         padding: 0 25px;
     }
 
+}
+
+/* ************PAGE BLOG******************/
+/* Reglage global */
+@media (min-width: 20em) {
+    body {
+        font-size: 102.5%;
+    }
+}
+
+@media (min-width: 30em) {
+    body {
+        font-size: 105%;
+    }
+}
+
+@media (min-width: 54em) {
+    body {
+        font-size: 107.5%;
+    }
+}
+
+@media (min-width: 64em) {
+    body {
+        font-size: 110%;
+    }
+}
+
+@media (min-width: 76.5em) {
+    body {
+        font-size: 115%;
+    }
+}
+
+@media (min-width: 114em) {
+    body {
+        font-size: 125%;
+    }
+}
+
+@media (min-width: 54em) {
+    h1 {
+        font-size: 3em;
+    }
+}
+
+@media (min-width: 76.5em) {
+    h1 {
+        font-size: 3.5em;
+    }
+}
+
+/* Media tabs */
+@media (min-width: 54em) {
+    .tabs {
+        padding-left: 8em;
+        padding-right: 8em;
+    }
+}
+
+@media (min-width: 114em) {
+    .tabs {
+        padding-left: 10em;
+        padding-right: 10em;
+    }
+}
+
+/* Media Previews */
+@media (max-width: 54em) {
+    .previews {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 54em) {
+    .previews>*:first-child {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 45%;
+    }
+}
+
+@media (min-width: 54em) {
+    .previews>*:last-child {
+        margin-left: 45%;
+    }
+}
+
+@media (min-width: 54em) {
+    .preview__link {
+        padding: 4em 8em;
+    }
+}
+
+@media (min-width: 114em) {
+    .preview__link {
+        padding-left: 10em;
+        padding-right: 10em;
+    }
+}
+
+/* Media Cards */
+@media (min-width: 54em) {
+    .cards>* {
+        flex-basis: 50%;
+        max-width: 50%;
+    }
+}
+
+@media (min-width: 114em) {
+    .cards>* {
+        flex-basis: 33.3333333333%;
+        max-width: 33.3333333333%;
+    }
+}
+
+/* Media Footer */
+
+@media (min-width: 54em) {
+    .cards {
+        padding: 4em 2em;
+    }
+}
+
+@media (min-width: 30em) {
+    .footer {
+        flex-direction: row;
+    }
+}
+
+@media (min-width: 30em) {
+    .footer__social {
+        margin-top: 0;
+    }
 }
