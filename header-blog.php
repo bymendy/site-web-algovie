@@ -11,6 +11,16 @@
 
         <link href="https://uploads-ssl.webflow.com/63bd73a09b9b6e369089bd16/css/algovie-time-to-be-happy.webflow.fa93868cc.css" rel="stylesheet" type="text/css"/>
         <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="navbar.css" />
+        <!-- <link rel="stylesheet" href="menu-burger.css" /> -->
+            <!-- links pour icones fontawesome -->
+        <script
+        src="https://kit.fontawesome.com/896637ab26.js"
+        crossorigin="anonymous"
+        ></script>
+
+
+
 
 
 

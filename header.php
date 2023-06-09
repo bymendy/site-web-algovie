@@ -11,6 +11,9 @@
 
         <link href="https://uploads-ssl.webflow.com/63bd73a09b9b6e369089bd16/css/algovie-time-to-be-happy.webflow.fa93868cc.css" rel="stylesheet" type="text/css"/>
         <!-- <link rel="stylesheet" href="style.css" /> -->
+                <!-- lien Bootstrap -->
+
+        <link rel="stylesheet" href="bootstrap-5.2.3-dist/css/bootstrap.min.css" />
         <link rel="stylesheet" href="navbar.css" />
         <link rel="stylesheet" href="menu-burger.css" />
 
@@ -46,21 +49,26 @@
                     <a href="#" class="btn-connect">Se connecter</a>
                 </div>
             </div>
-            <div class="side-nav ">
-                        <ul class="abs-center nav-options">
-                            <li class="rela-block"><a class="nav-link " href="index.php">Accueil</a></li>
-                            <li class="rela-block"><a class="nav-link " href="blog.php">Blog</a></li>
-                        </ul>
-                    </div>
-                <div class="rela-block top-section">
-                    <div class="nav-button my-2 top">
-                        <div class="abs-center nav-bars"></div>
-                    </div>
-                    <div class="search-button">
-                        <div class="abs-center magnefying-glass"></div>
-                    </div>
-                </div>
+
         </nav>
+        <!-- MENU BURGER -->
+        <div id="sidebar">
+            <div class="side-nav ">
+                <ul class="abs-center nav-options">
+                    <li class="rela-block"><a class="nav-link " href="index.php">Accueil</a></li>
+                    <li class="rela-block"><a class="nav-link " href="blog.php">Blog</a></li>
+                </ul>
+            </div>
+            <div class="rela-block top-section">
+                <div class="nav-button my-2 top">
+                    <div class="abs-center nav-bars"></div>
+                </div>
+                <div class="search-button">
+                    <div class="abs-center magnefying-glass"></div>
+                </div>
+            </div>
+        </div>
+        <!-- SECTION 1  -->
         <section class="header w-row">
             
 

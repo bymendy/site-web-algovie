@@ -185,7 +185,7 @@
 .nav-bars {
     width: 30px;
     height: 4px;
-    background-color: #fff;
+    background-color: #E35499;
     left: 40%;
 }
 
@@ -201,7 +201,7 @@
     bottom: false;
     width: 130%;
     height: 100%;
-    background-color: #fff;
+    background-color: #E35499;
     transition: 0.35s ease;
 }
 
@@ -212,4 +212,17 @@
 .nav-bars:after {
     top: 7px;
     width: 70%;
+}
+
+/* ************PAGE ACCEUIL******************/
+
+@media (min-width: 1000px) {
+    #sidebar {
+        width: 30%;
+        /* float: right; */
+        margin-top: 10px;
+        padding: 0 25px;
+        display: none;
+    }
+
 }

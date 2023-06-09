@@ -3,6 +3,7 @@ require_once('header-blog.php')
 ?>
 
 <main>
+  
   <section class="previews">
     <div>
       <figure class="absolute-bg preview__img" style="background-image: url('https://uploads-ssl.webflow.com/63bd73a09b9b6e369089bd16/63bd73f098f7597b3f54214c_Header_Algovie_mobile.jpg');"></figure>
@@ -13,11 +14,25 @@ require_once('header-blog.php')
       <div class="previews__container">
         <span>Bienvenue sur notre page</span>
         <h1>Blog</h1>
+        <div class="post-article"> 
+          <a href="post-article.php" class="publish-article-link">
+            <i class="fa fa-pencil-square-o"></i> <span>Publier un article</span>
+          </a>
+        </div>
       </div>
+
+      
     </div>
 
-    <div>
+    <div class="section-left">
+    <div class="navigation-bar home-nav-brand">
+    <a href="index.php" class="navbar-brand home-nav-brand">
+    <i class="fa fa-home"></i><img src="https://uploads-ssl.webflow.com/63bd73a09b9b6e369089bd16/63bd73f13cd2084ea3007a8a_Logo_Algovie_footer.png" loading="lazy" width="200" alt="" class="image-3"/>
+    </a>
+    </div>
+
       <header>
+        
         <ul class="tabs">
           <li class="tabs__item">Articles</li>
           <li class="tabs__item">Categories</li>
@@ -27,41 +42,41 @@ require_once('header-blog.php')
         <ul itemscope itemtype="http://schema.org/Blog">    
           <li class="preview" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
             <a class="preview__link" href="#" itemprop="url">
-              <span class="preview__date" itemprop="datePublished" datetime="2016-09-08T00:00:00-07:00">Sep 8, 2016</span>
-              <h2 class="preview__header" itemprop="name">Roof Party</h2>
-              <p class="preview__excerpt" itemprop="description">Banh mi pug you probably haven’t heard of them occupy, drinking vinegar humblebrag vinyl locavore master cleanse sartorial bicycle rights 90’s kickstarter hashtag. 3 wolf moon XOXO man braid chartreuse....</p>
+              <span class="preview__date" itemprop="datePublished" datetime="2016-09-08T00:00:00-07:00">Jun 8, 2023</span>
+              <h2 class="preview__header" itemprop="name">Lorem ipsum</h2>
+              <p class="preview__excerpt" itemprop="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni cumque eveniet, quae similique ut deleniti iure vel sint excepturi natus in magnam sit obcaecati illo asperiores provident placeat, blanditiis error.</p>
               <span class="preview__more">Lire plus</span>
             </a>
           </li>
           <li class="preview" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
             <a class="preview__link" href="#" itemprop="url">
-              <span class="preview__date" itemprop="datePublished" datetime="2016-09-07T00:00:00-07:00">Sep 7, 2016</span>
-              <h2 class="preview__header" itemprop="name">Craft Beer</h2>
-              <p class="preview__excerpt" itemprop="description">Tbh vaporware mumblecore iceland echo park DIY. Plaid woke next level enamel pin, vegan cred salvia pug. XOXO sartorial synth gluten-free, cold-pressed mumblecore craft beer helvetica. Vegan lyft squid, vice...</p>
+              <span class="preview__date" itemprop="datePublished" datetime="2016-09-07T00:00:00-07:00">Jun 7, 2023</span>
+              <h2 class="preview__header" itemprop="name">Lorem damet ipsum</h2>
+              <p class="preview__excerpt" itemprop="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita iste cum commodi eligendi qui deserunt eveniet dolorum quisquam tempore aut minus voluptate, ab animi ducimus voluptates nulla aliquam quae asperiores?.</p>
               <span class="preview__more">Lire plus</span>
             </a>
           </li>   
           <li class="preview" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
             <a class="preview__link" href="#" itemprop="url">
-              <span class="preview__date" itemprop="datePublished" datetime="2016-09-06T00:00:00-07:00">Sep 6, 2016</span>
-              <h2 class="preview__header" itemprop="name">Next Level Blog</h2>
-              <p class="preview__excerpt" itemprop="description">Humblebrag ramps single-origin coffee, literally jean shorts polaroid mlkshk franzen williamsburg distillery venmo. Skateboard leggings disrupt banjo shoreditch blue bottle. Brooklyn church-key cronut hell of waistcoat, polaroid lomo chambray bitters...</p>
+              <span class="preview__date" itemprop="datePublished" datetime="2016-09-06T00:00:00-07:00">Jun 6, 2023</span>
+              <h2 class="preview__header" itemprop="name">Lorem ipsum </h2>
+              <p class="preview__excerpt" itemprop="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae hic quo ratione voluptatum earum, nostrum magni saepe a mollitia impedit. Fugiat veniam ex a error nostrum fuga ipsa ad nobis?Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto quas aperiam hic accusantium ipsa?</p>
               <span class="preview__more">Lire plus</span>
             </a>
           </li>
           <li class="preview" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
             <a class="preview__link" href="#" itemprop="url">
-              <span class="preview__date" itemprop="datePublished" datetime="2016-09-05T00:00:00-07:00">Sep 5, 2016</span>
-              <h2 class="preview__header" itemprop="name">VHS Selfies</h2>
-              <p class="preview__excerpt" itemprop="description">8-bit typewriter scenester, crucifix tousled tilde leggings brunch chicharrones salvia deep v man bun. Master cleanse man braid disrupt banjo, deep v cray tumblr cronut. Truffaut street art everyday carry...</p>
+              <span class="preview__date" itemprop="datePublished" datetime="2016-09-05T00:00:00-07:00">Jun 5, 2023</span>
+              <h2 class="preview__header" itemprop="name">Lorem ipsum damet ipsim</h2>
+              <p class="preview__excerpt" itemprop="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae hic quo ratione voluptatum earum, nostrum magni saepe a mollitia impedit. Fugiat veniam ex a error nostrum fuga ipsa ad nobis?Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
               <span class="preview__more">Lire plus</span>
             </a>
           </li>     
           <li class="preview" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
             <a class="preview__link" href="#" itemprop="url">
-              <span class="preview__date" itemprop="datePublished" datetime="2016-09-04T00:00:00-07:00">Sep 4, 2016</span>
-              <h2 class="preview__header" itemprop="name">Four Dollar Toast</h2>
-              <p class="preview__excerpt" itemprop="description">Flexitarian fixie keytar vice craft beer. Forage normcore cred austin brunch, put a bird on it actually. Chia put a bird on it skateboard, salvia paleo heirloom semiotics knausgaard selvage...</p>
+              <span class="preview__date" itemprop="datePublished" datetime="2016-09-04T00:00:00-07:00">Jun 4, 2023</span>
+              <h2 class="preview__header" itemprop="name">Lorem ipsum damet</h2>
+              <p class="preview__excerpt" itemprop="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae hic quo ratione voluptatum earum, nostrum magni saepe a mollitia impedit. Fugiat veniam ex a error nostrum fuga ipsa ad nobis?.</p>
             <span class="preview__more">Lire plus</span>
           </a>
         </li>
@@ -145,4 +160,5 @@ require_once('header-blog.php')
 </main>
   
 
-<?php require_once('footer.php'); ?>
+<?php require_once('footer-blog.php'); ?>
+

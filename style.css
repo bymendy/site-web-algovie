@@ -53,7 +53,7 @@ a {
 a:hover,
 a:active,
 a:focus {
-    color: #9f8f68;
+    color: #060E56;
 }
 
 figure {
@@ -154,6 +154,16 @@ section {
     min-height: 100vh;
 }
 
+/* BOUTTTON Publier article */
+
+.post-article {
+    background-color: rgba(201, 90, 157, 0.7);
+    margin-top: 25px;
+    border-radius: 15px;
+    width: 250px;
+    text-align: center;
+
+}
 
 /**
    * Onglets
@@ -230,7 +240,7 @@ section {
 }
 
 .preview:hover .preview__more {
-    box-shadow: inset 175px 0 0 0 #a5579e;
+    box-shadow: inset 175px 0 0 0 #79a8dd;
     color: #fff;
 }
 
@@ -251,7 +261,7 @@ section {
 }
 
 .preview__header {
-    color: #79a8dd;
+    color: #060E56;
     margin-bottom: 0.5em;
 }
 
@@ -262,7 +272,7 @@ section {
 .preview__more {
     display: inline-block;
     padding: 0.5em;
-    font-family: "Space Mono", monospace;
+    font-family: "Poppins", monospace;
     color: #79a8dd;
     border: 3px solid #79a8dd;
     box-shadow: inset 0 0 0 0 #79a8dd;
@@ -320,7 +330,7 @@ section {
 }
 
 .card__link:hover .card__more {
-    box-shadow: inset 175px 0 0 0 #245388;
+    box-shadow: inset 175px 0 0 0 #060E56;
     color: #fff;
 }
 
@@ -345,7 +355,7 @@ section {
 .card__more {
     display: inline-block;
     padding: 0.25em;
-    font-family: "Space Mono", monospace;
+    font-family: "Poppins", monospace;
     color: #79a8dd;
     border: 3px solid #79a8dd;
     box-shadow: inset 0 0 0 0 #79a8dd;
@@ -366,7 +376,7 @@ section {
 
 .footer__archive {
     position: relative;
-    color: #0a0a0a;
+    color: #060E56;
 }
 
 .footer__archive:after {
@@ -375,7 +385,7 @@ section {
     bottom: 0;
     left: 0;
     width: 0%;
-    border-bottom: 3px solid #a5579e;
+    border-bottom: 3px solid #060E56;
     transition: width 0.4s ease-in-out;
 }
 
@@ -449,18 +459,6 @@ section {
 }
 
 /************************* MEDIA QUERIES **********************/
-/* ************PAGE ACCEUIL******************/
-
-@media (min-width: 1000px) {
-    #sidebar {
-        width: 30%;
-        float: right;
-        margin-top: 10px;
-        padding: 0 25px;
-    }
-
-}
-
 /* ************PAGE BLOG******************/
 /* Reglage global */
 @media (min-width: 20em) {
