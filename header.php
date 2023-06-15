@@ -35,26 +35,30 @@
         <script src="https://www.google.com/recaptcha/api.js" type="text/javascript"></script>
     </head>
     <body class="body">
-        <nav class="navigation-bar">
-            <div class="flex fixed">
-                <div class="logo">
-                    <a href="index.php"><img src="img/logo.png" alt="Logo de votre site"></a>
-                </div>
-                <ul class="menu">
-                    <li>
-                    <a href="index.php">Accueil</a>
+        <!-- Bar de navigation -->
+        <nav class=" navigation-bar navbar navbar-expand-lg navbar-light bg-gradient-white ">
+            <div class="container">
+                <a class="navbar-brand" href="index.php"><img src="img/logo.png" alt="Logo de votre site" class="logo"></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end " id="navbarNav">
+                <ul class="navbar-nav ml-auto" >
+                    <li class="nav-item ">
+                    <a class="nav-link" href="index.php">Accueil</a>
                     </li>
-                    <li>
-                    <a href="blog.php">Blog</a>
+                    <li class="nav-item">
+                    <a class="nav-link" href="blog.php">Blog</a>
                     </li>
                 </ul>
-                <div class="right-section">
-                    <a href="#" class="btn-connect">Se connecter</a>
+                </div>
+                <div class="text-right mx-auto">
+                <a href="#" class="btn btn-primary">Se connecter</a>
                 </div>
             </div>
-
         </nav>
         <!-- MENU BURGER -->
+        <!-- SUR TOUTE LA LARGEUR BAKGROUND ASSOMBRIE  -->
         <div id="sidebar">
             <div class="side-nav ">
                 <ul class="abs-center nav-options">

@@ -65,7 +65,10 @@ ul {
     padding: 0;
     list-style-type: none;
 }
-
+/* Home Logo Retour Acceuil page BLOG */
+.home-nav-brand {
+    text-align: center;
+}
 /**
  * Text Selection
  */
@@ -169,10 +172,12 @@ section {
    * Onglets
    *Sur la page du blog pour les articles et les catégories
    */
+
 .tabs {
     display: flex;
     justify-content: space-around;
-    padding: 1em;
+    padding: 2rem;
+
 }
 
 .tabs__item {

@@ -14,18 +14,19 @@ require_once('header-blog.php')
       <div class="previews__container">
         <span>Bienvenue sur notre page</span>
         <h1>Blog</h1>
-        <div class="post-article"> 
+        <!-- BOUTTON APPARAIT SEULEMENT QUAND L'INTERNAUTE EST CONNECTER  -->
+        <!-- <div class="post-article"> 
           <a href="post-article.php" class="publish-article-link">
             <i class="fa fa-pencil-square-o"></i> <span>Publier un article</span>
           </a>
-        </div>
+        </div> -->
       </div>
 
       
     </div>
 
     <div class="section-left">
-    <div class="navigation-bar home-nav-brand">
+    <div class="navigation-bar home-nav-brand text-center">
     <a href="index.php" class="navbar-brand home-nav-brand">
     <i class="fa fa-home"></i><img src="https://uploads-ssl.webflow.com/63bd73a09b9b6e369089bd16/63bd73f13cd2084ea3007a8a_Logo_Algovie_footer.png" loading="lazy" width="200" alt="" class="image-3"/>
     </a>
