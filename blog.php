@@ -1,7 +1,10 @@
 <?php
+require_once('include/init.php');
+
 require_once('header-blog.php')
 ?>
-
+<body>
+  
 <main>
   
   <section class="previews">
@@ -15,11 +18,6 @@ require_once('header-blog.php')
         <span>Bienvenue sur notre page</span>
         <h1>Blog</h1>
         <!-- BOUTTON APPARAIT SEULEMENT QUAND L'INTERNAUTE EST CONNECTER  -->
-        <!-- <div class="post-article"> 
-          <a href="post-article.php" class="publish-article-link">
-            <i class="fa fa-pencil-square-o"></i> <span>Publier un article</span>
-          </a>
-        </div> -->
       </div>
 
       
@@ -30,6 +28,8 @@ require_once('header-blog.php')
     <a href="index.php" class="navbar-brand home-nav-brand">
     <i class="fa fa-home"></i><img src="https://uploads-ssl.webflow.com/63bd73a09b9b6e369089bd16/63bd73f13cd2084ea3007a8a_Logo_Algovie_footer.png" loading="lazy" width="200" alt="" class="image-3"/>
     </a>
+
+    
     </div>
 
       <header>
@@ -37,8 +37,11 @@ require_once('header-blog.php')
         <ul class="tabs">
           <li class="tabs__item">Articles</li>
           <li class="tabs__item">Categories</li>
+          <li> <a><button class="btn btn-outline-dark" data-toggle="modal" id="model" data-target="#connexionModal">Déposer un article<?= (isset($_SESSION['membre'])) ? '<style>#model{ display: none; }</style>' : ''; ?></button> </a></li>
         </ul>
+        
       </header>
+      
       <div class="tab">
         <ul itemscope itemtype="http://schema.org/Blog">    
           <li class="preview" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
@@ -159,6 +162,29 @@ require_once('header-blog.php')
     </div>
   </section>
 </main>
+<div class="#">
+          <!-- Modal -->
+          <div class="modal fade" id="connexionModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                <h3 class="modal-title " id="exampleModalLabel"><img src="<?= URL ?>logo_annonceo.png ">Bonjour !  <br> Connectez-vous ou créez un compte pour déposer votre annonce </h3>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body text-center">
+                <a class="dropdown-item" href="<?= URL ?>inscription.php"><button class="btn btn-outline-dark">Créer un compte</button></a>
+                <a class="" href="<?= URL ?>connexion.php"><button class="btn btn-outline-dark px-4">Me connecter</button></a>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
   
 
 <?php require_once('footer-blog.php'); ?>

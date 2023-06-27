@@ -20,14 +20,14 @@ $erreur_index = "";
 $validate = "";
 $validate_index = "";
 $content = "";
-$toutesAnnonces = ['1 = 1'];
+$toutesArticles = ['1 = 1'];
 
 $servername = 'localhost';
 $username = 'root';
 $password = '';
 $dbname = 'algovie';
 $conn = new mysqli($servername, $username, $password, $dbname);
-$arrayAnnonce = '';
+$arrayArticle = '';
 
 
 

@@ -29,6 +29,6 @@
         <script src="assets/app-burger.js"></script>
         <script src="assets/app-blog.js"></script>
 
-
+    
     </body>
 </html>

@@ -35,3 +35,47 @@
         <link href="https://uploads-ssl.webflow.com/63bd73a09b9b6e369089bd16/63bebed342064b294d9d1e7c_Icone-Algovie.jpg" rel="apple-touch-icon"/>
         <script src="https://www.google.com/recaptcha/api.js" type="text/javascript"></script>
     </head>
+    <body>
+        <nav>
+        <?php if(internauteConnecte()): ?>
+      <!-- si l'internaute est connecté il aura accés aux pages profil, deposer votre article et un bouton de deconnexion  -->
+      <li class="nav-item dropdown mr-1">
+        <a class="nav-link dropdown-toggle btn btn-dark" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <button type="button" class="btn btn-dark">Espace <strong><?= $_SESSION['membre']['pseudo'] ?></strong></button>
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="<?= URL ?>profil.php">Profil <?= $_SESSION['membre']['pseudo'] ?></a>
+     
+
+          <a class="dropdown-item" href="<?= URL ?>connexion.php?action=deconnexion">Déconnexion</a>
+        </div>
+      </li>
+    <?php else: ?>
+      <!-- ---------------------------- -->
+      <!-- si il n'est pas connecté, il aura droit aux pages inscription, connexion, voir toutes les articles et contact  (mais pas aux autres)-->
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle mr-5" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <button type="button" class="btn btn-outline-dark">Espace Membre</button>
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="<?= URL ?>inscription.php"><button class="btn btn-outline-dark">Inscription</button></a>
+          <a class="dropdown-item" href="<?= URL ?>connexion.php"><button class="btn btn-outline-dark px-4">Connexion</button></a>
+
+          <a class="dropdown-item" href="<?= URL ?>contact.php"><button class="btn btn-outline-dark px-4">Contact</button></a>
+        </div>
+      </li>
+      <?php endif; ?>
+    
+     <!-- ------------------------------------ -->
+     <!-- le bouton admin n'apparaitra que pour un utilisateur qui a les droits d'admin -->
+    <?php if(internauteConnecteAdmin()): ?>
+      <li class="nav-item mr-5">
+          <a class="nav-link" href="admin/index.php"><button type="button" class="btn btn-dark">Admin</button></a>
+      </li>
+    <?php endif; ?>
+
+        </nav>
+    
+
+        
+

@@ -1,5 +1,5 @@
 <?php
-
+// Fichier Functions.php
 function debug($var, $mode = 1){
     $trace = debug_backtrace();
     // array_shift, fonction prédéfinie qui permet de contourner une dimension d'un tableau 
