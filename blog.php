@@ -18,18 +18,58 @@ require_once('header-blog.php')
         <span>Bienvenue sur notre page</span>
         <h1>Blog</h1>
         <!-- BOUTTON APPARAIT SEULEMENT QUAND L'INTERNAUTE EST CONNECTER  -->
+        <?php if(internauteConnecteAdmin()): ?>
+          <a class="nav-link" href="admin/index.php"><button type="button" class="shadow btn btn-light btn-outline-primary btn-16">Mon espace Admin</button></a>
+    
+      <?php endif; ?>
       </div>
 
       
     </div>
 
     <div class="section-left">
-    <div class="navigation-bar home-nav-brand text-center">
-    <a href="index.php" class="navbar-brand home-nav-brand">
-    <i class="fa fa-home"></i><img src="https://uploads-ssl.webflow.com/63bd73a09b9b6e369089bd16/63bd73f13cd2084ea3007a8a_Logo_Algovie_footer.png" loading="lazy" width="200" alt="" class="image-3"/>
-    </a>
+        <?php if(internauteConnecte()): ?>
+      <!-- si l'internaute est connecté il aura accés aux pages profil, deposer votre article et un bouton de deconnexion  -->
+        <a class="my-2 nav-link btn btn-primary border-0" href="#" role="button">
+        <button type="button" class="btn btn-primary">Espace <strong><?= $_SESSION['membre']['pseudo'] ?></strong></button>
+        </a>
+        <div class="d-flex align-items-center justify-content-center btn btn-outline-light border-0">
+          <a class="dropdown-item" href="profil.php">Profil <?= $_SESSION['membre']['pseudo'] ?></a>
+     
+
+          <a class="dropdown-item" href="connexion.php?action=deconnexion">Déconnexion</a>
+        </div>
+    <?php else: ?>
+      <!-- ---------------------------- -->
+      <!-- si il n'est pas connecté, il aura droit aux pages inscription, connexion, voir toutes les articles et contact  (mais pas aux autres)-->
+      <!-- <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle mr-5" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <button type="button" class="btn btn-outline-dark">Espace Membre</button>
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="<?= URL ?>inscription.php"><button class="btn btn-outline-dark">Inscription</button></a>
+          <a class="dropdown-item" href="<?= URL ?>connexion.php"><button class="btn btn-outline-dark px-4">Connexion</button></a>
+
+          <a class="dropdown-item" href="<?= URL ?>contact.php"><button class="btn btn-outline-dark px-4">Contact</button></a>
+        </div>
+      </li> -->
+      <?php endif; ?>
+      
 
     
+     <!-- ------------------------------------ -->
+    <div class="navigation-bar home-nav-brand text-center">
+    <a href="index.php" class="navbar-brand home-nav-brand">
+        <i class="fa fa-home"></i><img src="https://uploads-ssl.webflow.com/63bd73a09b9b6e369089bd16/63bd73f13cd2084ea3007a8a_Logo_Algovie_footer.png" loading="lazy" width="200" alt="" class="image-3"/>
+      
+
+      
+      <!-- --------------Boutton pour Activer la Modal------------ -->
+
+        <a><button class="btn btn-outline-primary" data-toggle="modal" id="model" data-target="#connexionModal">Déposer un article<?= (isset($_SESSION['membre'])) ? '<style>#model{ display: none; }</style>' : ''; ?></button> </a>
+        
+      <!-- ------------------------------------ -->
+    </a>    
     </div>
 
       <header>
@@ -37,7 +77,6 @@ require_once('header-blog.php')
         <ul class="tabs">
           <li class="tabs__item">Articles</li>
           <li class="tabs__item">Categories</li>
-          <li> <a><button class="btn btn-outline-dark" data-toggle="modal" id="model" data-target="#connexionModal">Déposer un article<?= (isset($_SESSION['membre'])) ? '<style>#model{ display: none; }</style>' : ''; ?></button> </a></li>
         </ul>
         
       </header>
@@ -162,28 +201,29 @@ require_once('header-blog.php')
     </div>
   </section>
 </main>
+<!-- ------------------------------------ -->
+
 <div class="#">
           <!-- Modal -->
           <div class="modal fade" id="connexionModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
               <div class="modal-content">
                 <div class="modal-header">
-                <h3 class="modal-title " id="exampleModalLabel"><img src="<?= URL ?>logo_annonceo.png ">Bonjour !  <br> Connectez-vous ou créez un compte pour déposer votre annonce </h3>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <h3 class="modal-title " id="exampleModalLabel"><img src="img/logo.png " class="rounded-circle"> Bonjour !  <br> Connectez-vous ou créez un compte pour déposer votre article </h3>
+                  <button type="button" class="btn btn-danger" data-dismiss="modal">
                     <span aria-hidden="true">&times;</span>
                   </button>
                 </div>
                 <div class="modal-body text-center">
-                <a class="dropdown-item" href="<?= URL ?>inscription.php"><button class="btn btn-outline-dark">Créer un compte</button></a>
-                <a class="" href="<?= URL ?>connexion.php"><button class="btn btn-outline-dark px-4">Me connecter</button></a>
+                <a class="dropdown-item" href="inscription.php"><button class="btn btn-outline-primary">Créer un compte</button></a>
+                <a class="" href="connexion.php"><button class="btn btn-outline-primary px-4">Me connecter</button></a>
                 </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
-                </div>
+
               </div>
             </div>
           </div>
 
+<!-- ------------------------------------ -->
 
   
 

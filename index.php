@@ -42,9 +42,9 @@ require_once('header.php')
             </div>
         </div>
         <section id="beta" class="devenez wf-section">
-            <div class="container-video">
+            <div class="">
                 <div class="hero-wrapper">
-                    <div class="hero-split">
+                    <div class="w-100 hero-split">
                         <h2 class="titlegradient">
                             Devenez <br/>bêta-testeur
                         </h2>
@@ -89,10 +89,10 @@ require_once('header.php')
             </div>
         </section>
         <section class="bonheur wf-section">
-            <div class="container-video">
+            <div class="#">
                 <h2 class="heading-2">C’est quoi le bonheur pour vous ?</h2>
                 <h2 class="heading-3">Si vous pouvez le dire, vous êtes déjà en train d’y parvenir !</h2>
-                <p class="margin-bottom-24px">Algovie, votre Assistant de développement personnel prend le temps de vous connaître, optimise votre quotidien et vous motive pour atteindre tous vos objectifs. L’application trouve des solutions adaptées pour optimiser votre temps. Grâce à elle, gagnez en équilibre de vie et bien-être.</p>
+                <p class="margin-bottom-24px text-center">Algovie, votre Assistant de développement personnel prend le temps de vous connaître, optimise votre quotidien et vous motive pour atteindre tous vos objectifs. L’application trouve des solutions adaptées pour optimiser votre temps. Grâce à elle, gagnez en équilibre de vie et bien-être.</p>
                 <div class="columns-3 w-row">
                     <div class="column-5 shadow w-col w-col-4 w-col-small-small-stack">
                         <img src="https://uploads-ssl.webflow.com/63bd73a09b9b6e369089bd16/63bd73f06f98816f8af2f071_Connaitre_Algovie.png" loading="lazy" alt=""/>

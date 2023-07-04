@@ -39,7 +39,16 @@
         <nav class=" navigation-bar navbar navbar-expand-lg navbar-light bg-gradient-white ">
             <div class="container">
                 <a class="navbar-brand" href="index.php"><img src="img/logo.png" alt="Logo de votre site" class="logo"></a>
+
+            <!-- ------------------------------------ -->
+            
+            <!-- le bouton admin n'apparaitra que pour un utilisateur qui a les droits d'admin -->
+            <?php if(internauteConnecteAdmin()): ?>
                 
+            <a class="nav-link" href="admin/index.php"><button type="button" class="btn btn-outline-primary">Admin</button></a>
+            <?php endif; ?>
+            <!-- ------------------------------------ -->
+
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
                 </button>
@@ -54,8 +63,21 @@
                     </li>
                 </ul>
                 </div>
+                
                 <div class="text-right mx-auto">
-                <a href="#" class="btn btn-primary">Se connecter</a>
+
+                <!-- -------------------------- -->
+                <?php if(internauteConnecte()): ?>
+                <!-- si l'internaute est connecté il aura accés aux pages profil, deposer votre article et un bouton de deconnexion  -->
+
+                <a class="btn btn-primary" href="connexion.php?action=deconnexion">Déconnexion</a>
+
+                <?php else: ?>
+                    <a class="#" href="connexion.php"><button class="btn btn-outline-primary shadow px-4">Se connecter</button></a>
+                    <?php endif; ?>
+                <!-- ------------------------------------ -->
+
+
                 </div>
             </div>
         </nav>

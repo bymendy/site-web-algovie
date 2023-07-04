@@ -1,17 +1,22 @@
 <?php
-require_once('header.php')
+require_once('include/init.php');
+require_once('header.php');
+
 ?>
-    <div class="margin-top container mb-4">
+<div class="d-flex align-items-center justify-content-center vh-100 ">
+
+
+    <div class="vh-100 margin-top container  bg-transparent">
     
-    <div class="row">
-      <div class="col-lg-8">
+    <div class="row  bg-transparent">
+      <div class=" col-lg-8">
         <!-- SECTION PUBLIER UN ARTICLE -->
         <section id="publier">
         <div class="dropdown p-2 my-4">
             <!-- Choix de La Langue -->
-            <button class="btn btn-light dropdown-toggle" type="button" id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+            <!-- <button class="btn btn-light dropdown-toggle" type="button" id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="false">
               Choix de la langue
-            </button>
+            </button> -->
             <ul class="dropdown-menu " aria-labelledby="languageDropdown">
               <li><a class="dropdown-item" href="#">Anglais</a></li>
               <li><a class="dropdown-item" href="#">Français</a></li>
@@ -33,8 +38,8 @@ require_once('header.php')
   
             <!-- Boutton Modifier & Apercçu -->
             <div>
-              <button class="btn btn-secondary me-2">Modifier</button>
-              <button class="btn btn-secondary">Aperçu</button>
+              <button class="btn btn-light me-2">Modifier</button>
+              <button class="btn btn-light">Aperçu</button>
             </div>
           </div>
             <!-- Insertion d'une image de couverture -->
@@ -45,17 +50,20 @@ require_once('header.php')
             <!-- Plusieurs Icones de mise en page -->
           <div class="d-flex justify-content-center mb-3">
             <div class="btn-group">
-              <button class="btn btn-secondary"><i class="far fa-image"></i></button>
-              <button class="btn btn-secondary"><i class="fas fa-bold"></i></button>
-              <button class="btn btn-secondary"><i class="fas fa-italic"></i></button>
-              <button class="btn btn-secondary"><i class="fas fa-list-ul"></i></button>
-              <button class="btn btn-secondary"><i class="fas fa-underline"></i></button>
-              <button class="btn btn-secondary"><i class="fas fa-paperclip"></i></button>
+              <button class="btn btn-light"><i class="far fa-image"></i></button>
+              <button class="btn btn-light"><i class="fas fa-bold"></i></button>
+              <button class="btn btn-light"><i class="fas fa-italic"></i></button>
+              <button class="btn btn-light"><i class="fas fa-list-ul"></i></button>
+              <button class="btn btn-light"><i class="fas fa-underline"></i></button>
+              <button class="btn btn-light"><i class="fas fa-paperclip"></i></button>
             </div>
           </div>
             <!-- Bloc de rédaction du contenu de l'article -->
+            <div class="mb-3">
+            <textarea class="form-control" rows="2" placeholder="Description courte"></textarea>
+          </div>
           <div class="mb-3">
-            <textarea class="form-control" rows="8" placeholder="Écrivez le contenu de votre article ici"></textarea>
+            <textarea class="form-control" rows="6" placeholder="Écrivez le contenu de votre article ici"></textarea>
           </div>
             <!-- Boutton Publié et Brouillon -->
           <div>
@@ -67,7 +75,7 @@ require_once('header.php')
       </div>
       <!-- Infos de Publications -->
       <div class="col-lg-4">
-        <div class="p-2 my-4">
+        <div class="p-5 my-4">
           <div>
             <strong>Écrire un excellent titre d'article</strong>
           </div>
@@ -79,6 +87,6 @@ require_once('header.php')
     </div>
     </div>
   </div>
-  
+</div> 
     <?php require_once('footer.php'); ?>
 

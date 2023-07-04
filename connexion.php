@@ -3,14 +3,14 @@ require_once('include/init.php');
 
 $pageTitle = "Connexion";
 
-if(isset($_GET['action']) && $_GET['action'] == 'deconnexion'){
-    unset($_SESSION['membre']);
-    header('location:' . URL . 'connexion.php');
-    exit();
+if (isset($_GET['action']) && $_GET['action'] === 'deconnexion') {
+  unset($_SESSION['membre']);
+  header("Location: connexion.php");
+  exit();
 }
 if(internauteConnecte()){
-    header('location:' . URL . 'profil.php');
-    exit();
+  header("Location: profil.php");
+  exit();
 }
 
 // condition a mettre obligatoirement pour éviter un undefined key $action (si la personne veut se connecter sans passer par la phase inscription)
@@ -51,8 +51,8 @@ if($_POST){
                         header('location:' . URL . 'admin/index.php?action=validate' );
 
                     }else{
-                        // dernier cas de figure, ni il est admin, ni il arrive du panier, on l'envoie vers son profil
-                        header('location:' . URL . 'profil.php?action=validate' );
+          
+                      header("Location: profil.php");
                     }
                     
                 }
@@ -72,33 +72,28 @@ require_once('header.php');
 ?>
 
 <?= $validate ?>
+<form method="POST" action="">
 
-<form class="my-5" method="POST" action="">
-
-<div class="container">
-    <div class="row">
-      <div class="col-md-6 offset-md-3">
-        <div class="card">
-          <div class="card-body">
+<div class=" header d-flex align-items-center justify-content-center vh-100 ">
+  <div class="card bg-transparent ">
+    <div class="card-body  ">
             <h3 class="text-center mb-4">Se connecter</h3>
               <div class="form-group">
               <label class="form-label" for="pseudo"><div class="badge badge-dark text-wrap">Pseudo</div></label>
-                <input class="form-control btn btn-outline-dark mb-4" type="text" name="pseudo" id="pseudo" placeholder="Votre pseudo">
+                <input class="form-control btn btn-outline-primary mb-4" type="text" name="pseudo" id="pseudo" placeholder="Votre pseudo">
               </div>
               <div class="form-group">
               <label class="form-label" for="mdp"><div class="badge badge-dark text-wrap">Mot de passe</div></label>
-                <input class="form-control btn btn-outline-dark mb-4" type="password" name="mdp" id="mdp" placeholder="Votre mot de passe">
+                <input class="form-control btn btn-outline-primary mb-4" type="password" name="mdp" id="mdp" placeholder="Votre mot de passe">
               </div>
               <button type="submit" class="btn btn-primary btn-block">Connexion</button>
           </div>
         </div>
-      </div>
-    </div>
+
   </div>
 
 
 
-    
-</form>
 
+</form>
 <?php require_once('footer.php') ?>

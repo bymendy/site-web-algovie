@@ -68,7 +68,7 @@ $('#confirm-delete').on('show.bs.modal', function(e) {
         $('#myModalUsers').modal('show');
     });
 </script>
-<!-- modal -->
+<!-- script  -->
 
 </body>
 

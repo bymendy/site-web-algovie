@@ -10,6 +10,10 @@
     --color-white: #fff;
 
 }
+.margintop{
+    margin-top: 200px;
+}
+
 
 /**
    * Paramètres de base
@@ -463,6 +467,17 @@ section {
     background-color: #fff;
 }
 
+.form-inscription {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.form-inscription form {
+    max-width: 400px;
+}
 /************************* MEDIA QUERIES **********************/
 /* ************PAGE BLOG******************/
 /* Reglage global */

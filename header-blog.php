@@ -11,10 +11,12 @@
 
         <link href="https://uploads-ssl.webflow.com/63bd73a09b9b6e369089bd16/css/algovie-time-to-be-happy.webflow.fa93868cc.css" rel="stylesheet" type="text/css"/>
                 <!-- lien Bootstrap -->
-        <link rel="stylesheet" href="bootstrap-5.2.3-dist/css/bootstrap.min.css" />
+                <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+        <!-- Lien CSS -->
         <link rel="stylesheet" href="style.css" />
         <!-- <link rel="stylesheet" href="menu-burger.css" /> -->
             <!-- links pour icones fontawesome -->
+            
         <script src="https://kit.fontawesome.com/896637ab26.js" crossorigin="anonymous"></script>
 
 
@@ -36,43 +38,9 @@
         <script src="https://www.google.com/recaptcha/api.js" type="text/javascript"></script>
     </head>
     <body>
-        <nav>
-        <?php if(internauteConnecte()): ?>
-      <!-- si l'internaute est connecté il aura accés aux pages profil, deposer votre article et un bouton de deconnexion  -->
-      <li class="nav-item dropdown mr-1">
-        <a class="nav-link dropdown-toggle btn btn-dark" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        <button type="button" class="btn btn-dark">Espace <strong><?= $_SESSION['membre']['pseudo'] ?></strong></button>
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="<?= URL ?>profil.php">Profil <?= $_SESSION['membre']['pseudo'] ?></a>
-     
 
-          <a class="dropdown-item" href="<?= URL ?>connexion.php?action=deconnexion">Déconnexion</a>
-        </div>
-      </li>
-    <?php else: ?>
-      <!-- ---------------------------- -->
-      <!-- si il n'est pas connecté, il aura droit aux pages inscription, connexion, voir toutes les articles et contact  (mais pas aux autres)-->
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle mr-5" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        <button type="button" class="btn btn-outline-dark">Espace Membre</button>
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="<?= URL ?>inscription.php"><button class="btn btn-outline-dark">Inscription</button></a>
-          <a class="dropdown-item" href="<?= URL ?>connexion.php"><button class="btn btn-outline-dark px-4">Connexion</button></a>
-
-          <a class="dropdown-item" href="<?= URL ?>contact.php"><button class="btn btn-outline-dark px-4">Contact</button></a>
-        </div>
-      </li>
-      <?php endif; ?>
-    
-     <!-- ------------------------------------ -->
      <!-- le bouton admin n'apparaitra que pour un utilisateur qui a les droits d'admin -->
-    <?php if(internauteConnecteAdmin()): ?>
-      <li class="nav-item mr-5">
-          <a class="nav-link" href="admin/index.php"><button type="button" class="btn btn-dark">Admin</button></a>
-      </li>
-    <?php endif; ?>
+
 
         </nav>
     
