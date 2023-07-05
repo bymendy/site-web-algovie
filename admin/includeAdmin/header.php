@@ -34,8 +34,8 @@
       <div class="list-group list-group-flush">
         <!-- Gestion Membre -->
         <a href="../admin/gestion_membre.php" class="list-group-item list-group-item-action bg-primary text-light py-5"><button type="button" class="btn btn-outline-primary text-light">Gestion des membres</button></a>
-        <!-- Gestion Annonce -->
-        <a href="#admin/gestion_annonce.php" class="list-group-item list-group-item-action bg-primary text-light py-5"><button type="button" class="btn btn-outline-primary text-light">Gestion des articles</button></a>
+        <!-- Gestion article -->
+        <a href="../admin/gestion_article.php" class="list-group-item list-group-item-action bg-primary text-light py-5"><button type="button" class="btn btn-outline-primary text-light">Gestion des articles</button></a>
         <!-- Gestion Categorie -->
         <a href="../admin/gestion_categorie.php" class="list-group-item list-group-item-action bg-primary text-light py-5"><button type="button" class="btn btn-outline-primary text-light">Gestion des catégories</button></a>
         <a href="../admin/stat.php" class="list-group-item list-group-item-action bg-primary text-light py-5"><button type="button" class="text-center btn btn-outline-primary text-light">Statistiques</button></a>
