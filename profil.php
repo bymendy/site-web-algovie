@@ -103,8 +103,8 @@ $articles = $recup->fetchAll(PDO::FETCH_ASSOC);
                     <p class="card-text"><?= $articles['description_longue'] ?></p>
                     <p class="card-text"><small class="text-muted">Publiée le <?= $articles['date_enregistrement'] ?></small></p>
 					<!-- Bouton pour voir ou supprimer l'articles -->
-					<a href="<?= URL ?>modif_articles.php?id=<?= $articles['id_article'] ?>" class="btn btn-sm btn-outline-primary">Modifier</a>
-					<a href="fiche_articles.php?id_article=<?= $articles['id_article']?>" class="btn btn-sm btn-outline-primary">Voir l'article</a>
+					<a href="modif_articles.php?id=<?= $articles['id_article'] ?>" class="btn btn-sm btn-outline-primary">Modifier</a>
+					<a href="fiche_article.php?id_article=<?= $articles['id_article']?>" class="btn btn-sm btn-outline-primary">Voir l'article</a>
                 </div>
             </div>
         <?php } ?>

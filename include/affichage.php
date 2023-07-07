@@ -36,7 +36,7 @@ if(isset($_GET['articles'])){
     // fin du </h2> pour le articles
 
     // pour les onglets Articles
-    $pageTitle = "Nos Articles " . ucfirst($_GET['articles']) . 's'; 
+    $pageTitle = "Nos Articles " . ucfirst($_GET['article']) . 's'; 
     // fin onglets Articles
 }
 // fin affichage par articles
@@ -45,8 +45,8 @@ if(isset($_GET['articles'])){
 // Tout ce qui concerne la fiche articles
 
 // affichage d'une articles
-if(isset($_GET['id_articles'])){
-    $detailArticle = $pdo->query(" SELECT * FROM articles WHERE id_articles = '$_GET[id_articles]' ");
+if(isset($_GET['id_article'])){
+    $detailArticle = $pdo->query(" SELECT * FROM articles WHERE id_article = '$_GET[id_article]' ");
     // pour se protéger de qlq'un qui tenterait de modifier l'id-articles dans l'URL
     if($detailArticle->rowCount() <= 0){
         header('location:' . URL);

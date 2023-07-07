@@ -146,7 +146,7 @@ require_once('includeAdmin/header.php');
 
 
 <h1 class="text-center my-5">
-    <div class="badge badge-warning text-wrap p-3">Gestion des Articles</div>
+    <div class="badge badge-primary text-wrap p-3">Gestion des Articles</div>
 </h1>
 
 <?= $erreur ?>
@@ -257,7 +257,7 @@ require_once('includeAdmin/header.php');
 
 
     <div class="col-md-1 mt-5">
-        <button type="submit" class="btn btn-outline-dark btn-warning">Valider</button>
+        <button type="submit" class="btn btn-outline-primary btn-dark">Valider</button>
     </div>
 
 </form>
@@ -265,7 +265,7 @@ require_once('includeAdmin/header.php');
 <div class="w-100 row justify-content-center py-5">
     <a href='?action=add'>
         <button type="button" class="btn btn-sm btn-outline-dark shadow rounded">
-            <i class="bi bi-plus-circle-fill"></i> Ajouter une article
+            <i class="bi bi-plus-circle-fill"></i> Ajouter un article
         </button>
     </a>
 </div>
@@ -276,9 +276,9 @@ require_once('includeAdmin/header.php');
 
 <!-- TABLEAU DES Articles -->
 <div class="col-12">
-<table class="table col-12  table-dark text-center table-responsive table-hover">
+<table class="table col-12  table-outline-light text-center table-responsive table-hover">
     <!-- Complété pour n'afficher que 10 prduits dans le tableau le OFFST détermine quel article affichée dans la nouvelle page -->
-    <?php $afficheArticles = $pdo->query("SELECT * FROM articles ORDER BY titre ASC LIMIT $parPage OFFSET $premierArticle") ?>
+    <?php $afficheArticles = $pdo->query("SELECT * FROM articles ORDER BY membre_id ASC LIMIT $parPage OFFSET $premierArticle") ?>
     <thead class="col-12">
         <tr>
             <?php for ($i = 0; $i < $afficheArticles->columnCount(); $i++) :
@@ -291,9 +291,14 @@ require_once('includeAdmin/header.php');
     <tbody class="col-12">
         <?php while ($article = $afficheArticles->fetch(PDO::FETCH_ASSOC)) : ?>
             <tr>
-                <?php foreach ($article as $key => $value) : ?>
-                        <td><img class="img-fluid" src="<?= URL . 'img/' . $value ?>" width="50" loading="lazy"></td>
+            <?php foreach ($article as $key => $value) : ?>
+                    <?php if ($key == 'titre') : ?>
                         <td><?= $value ?></td>
+                    <?php elseif ($key == 'photo') : ?>
+                        <td><img class="img-fluid" src="<?= URL . 'img/' . $value ?>" width="50" loading="lazy"></td>
+                    <?php else : ?>
+                        <td><?= $value ?></td>
+                    <?php endif; ?>
                 <?php endforeach; ?>
                 <!-- Crayon pour modifier (UPDATE) et poubelle pour supprimer (DELETE) -->
                 <td><a href='?action=update&id_article=<?= $article['id_article'] ?>'><i class="bi bi-pen-fill text-warning"></i></a></td>
@@ -314,7 +319,7 @@ require_once('includeAdmin/header.php');
         </li>
         <?php for($page = 1; $page <= $nombrePages; $page++): ?>
         <li class="mx-1 page-item">
-            <a class="btn btn-outline-warning <?= ($pageCourante == $page) ? 'active' : "" ?>" href="?page=<?= $page ?>"><?= $page ?> </a>
+            <a class="btn btn-outline-primary <?= ($pageCourante == $page) ? 'active' : "" ?>" href="?page=<?= $page ?>"><?= $page ?> </a>
         </li>
         <?php endfor; ?>
         <li class="page-item <?= ($pageCourante == $nombrePages)? 'disabled' : '' ?>">

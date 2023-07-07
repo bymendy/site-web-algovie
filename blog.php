@@ -84,7 +84,7 @@ require_once('header-blog.php')
       <div class="tab">
         <ul itemscope itemtype="http://schema.org/Blog">    
           <li class="preview" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
-            <a class="preview__link" href="#" itemprop="url">
+            <a class="preview__link" href="fiche_article.php" itemprop="url">
               <span class="preview__date" itemprop="datePublished" datetime="2016-09-08T00:00:00-07:00">Jun 8, 2023</span>
               <h2 class="preview__header" itemprop="name">Lorem ipsum</h2>
               <p class="preview__excerpt" itemprop="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni cumque eveniet, quae similique ut deleniti iure vel sint excepturi natus in magnam sit obcaecati illo asperiores provident placeat, blanditiis error.</p>
