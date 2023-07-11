@@ -14,6 +14,15 @@
 
         <!-- lien Bootstrap -->
         <link rel="stylesheet" href="bootstrap-5.2.3-dist/css/bootstrap.min.css" />
+
+        <title>Algovie Admin</title>
+
+
+        <!-- links sidebar -->
+        <link href="css/simple-sidebar.css" rel="stylesheet">
+
+        <!-- links pour les icon bootstrap -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
         <!-- Autres lien CSS -->
         <link rel="stylesheet" href="navbar.css" />
         <link rel="stylesheet" href="menu-burger.css" />

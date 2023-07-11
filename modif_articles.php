@@ -142,9 +142,9 @@ require_once('header.php');
 <?php endif; ?>
 
 <?php if (isset($_GET['action'])) : ?>
-    <h2 class="pt-5">Formulaire <?= ($_GET['action'] == 'add') ? "d'ajout" : "de modification" ?> des articles</h2>
-
-    <form id="monForm" class=" method="POST" action="" enctype="multipart/form-data">
+    <h2 class="m-5 pt-5">Formulaire <?= ($_GET['action'] == 'add') ? "d'ajout" : "de modification" ?> des articles</h2>
+ 
+    <form id="monForm" class=" m-5 my-5" method="POST" action="" enctype="multipart/form-data">
         <?= $erreur ?>
         <input type="hidden" name="id_article" value="<?= $id_article ?>">
         <div class="row mt-5">
@@ -154,7 +154,18 @@ require_once('header.php');
                 </label>
                 <input class="form-control" type="text" name="titre" id="titre" placeholder="titre" value="<?= $titre ?>">
             </div>
+            <div class="col-md-4">
+                <label class="form-label" for="categorie">
+                    <div class="badge badge-dark text-wrap">Catégorie</div>
+                </label>
+                <select class="form-control" id="categorie" name="categorie">
+                <?php while ($menuCategorie = $afficheMenuCategories->fetch(PDO::FETCH_ASSOC)) : ?>
+                        <option value="<?= $menuCategorie['id_categorie'] ?>"> <?= $menuCategorie['titre'] ?></option>
+                    <?php endwhile ?>
+                </select>
+            </div>
         </div>
+        
         <div class="row justify-content-around mt-5">
             <div class="col-md-6">
                 <label class="form-label" for="description_courte">
@@ -172,16 +183,7 @@ require_once('header.php');
         </div>
 
         <div class="row mt-5">
-            <div class="col-md-4">
-                <label class="form-label" for="categorie">
-                    <div class="badge badge-dark text-wrap">Catégorie</div>
-                </label>
-                <select class="form-control" id="categorie" name="categorie">
-                <?php while ($menuCategorie = $afficheMenuCategories->fetch(PDO::FETCH_ASSOC)) : ?>
-                        <option value="<?= $menuCategorie['id_categorie'] ?>"> <?= $menuCategorie['titre'] ?></option>
-                    <?php endwhile ?>
-                </select>
-            </div>
+
             <div class="col-md-4">
                 <label class="form-label" for="photo">
                     <div class="badge badge-dark text-wrap">Photo Principale</div>
@@ -211,12 +213,12 @@ $membre_id=$_SESSION['membre']['id_membre'];
 $queryArticle = $pdo->query(" SELECT id_article FROM articles WHERE membre_id = $membre_id"); ?>
 <h2 class=" p-5 py-5">Vous avez publiée <?= $queryArticle->rowCount() ?> articles</h2>
 
-<div class="container">
-<table class="table table-striped table-hover text-center table-responsive">
+<div class="#">
+<table class="table table-striped table-hover text-center table-responsive flex-wrap">
 
     <?php $afficheArticles = $pdo->query("SELECT * FROM articles WHERE membre_id = $id_membre ORDER BY titre ASC LIMIT $parPage OFFSET $premierAnnonce") ?>
 
-     <thead>
+     <thead class="flex-wrap">
         <tr>
             <?php for ($i = 0; $i < $afficheArticles->columnCount(); $i++) :
                 $colonne = $afficheArticles->getColumnMeta($i) ?>
@@ -266,5 +268,4 @@ $queryArticle = $pdo->query(" SELECT id_article FROM articles WHERE membre_id = 
         </div>
     </div>
 
-
-<?php require_once('footer.php') ?>
+    <?php require_once('footer.php'); ?>
